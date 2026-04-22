@@ -1,0 +1,5 @@
+[build]
+target = "x86_64-unknown-none"
+
+[target.'cfg(all(target_arch = "x86_64", target_os = "none"))']
+rustflags = ["-C", "code-model=kernel"]
